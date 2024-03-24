@@ -12,7 +12,7 @@ for index, row in df.iterrows():
     pdf.set_text_color(100,100,100)
     pdf.cell(w=0, h=12, txt=row["Topic"], align="L", ln=1, border=0)
     pdf.line(x1=10, y1=21, x2=200, y2=21)
-    for page in range(row["Pages"] - 1): # one page already added with header
+    for page in range(row["Pages"] - 1):  # one page already added with header
         pdf.add_page()
 
-pdf.output(("output.pdf"))
+pdf.output("output.pdf")
